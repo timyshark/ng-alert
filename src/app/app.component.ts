@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AlertService } from './services/alert.service';
+import { Alert } from './models/alert.model';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,7 @@ export class AppComponent {
   constructor (private alertService: AlertService){
     
   }
-  onLike(){
-    this.alertService.success('Yay!')
+  onClick(type: string,message:string){
+    this.alertService.alert(new Alert({alertType:type, message}))
   }
 }

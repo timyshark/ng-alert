@@ -9,18 +9,10 @@
     </div>
     </mat-card-content>
   <mat-card-actions>
-    <button mat-button (click)="onLike()">LIKE</button>
-    <button mat-button>SHARE</button>
+    <button mat-button (click)="onClick('success','Congratulations! Operation completed successfuly')">Success</button>
+    <button mat-button (click)="onClick('error','Exception raised while performing the operation')">Error</button>
+    <button mat-button (click)="onClick('info','This is to let you know something has happened')">Info</button>
+    <button mat-button (click)="onClick('warning','Becareful! a problem on the horizon, better watch out')">Warning</button>
   </mat-card-actions>
 </mat-card>
 <br>
-<mat-card>
-  <mat-card-header>
-    <mat-card-title>Actions Buttons</mat-card-title>
-    <mat-card-subtitle>End</mat-card-subtitle>
-  </mat-card-header>
-  <mat-card-actions align="end">
-    <button mat-button>LIKE</button>
-    <button mat-button>SHARE</button>
-  </mat-card-actions>
-</mat-card>
